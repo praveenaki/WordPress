@@ -1,5 +1,7 @@
 <?php
-
+/*
+Replacing old method of getting url using GET. This method solves the problem faced earlier (missing parameters from first '&' occurrence in the string)
+*/
 	$string = $_SERVER['REQUEST_URI'];
 	$string = explode("=", $string,2);
 	$string = $string[1];
